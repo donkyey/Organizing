@@ -9,8 +9,6 @@
 ## AsyncSubject
 
 ~~~swift
-let bag = DisposeBag()
-
 var asyncSubject = AsyncSubject<String>()
 
 asyncSubject.onNext("veryfirst value")
@@ -35,7 +33,6 @@ asyncSubject.onCompleted()
 ## PublishSubject
 
 ~~~swift
-let bag = DisposeBag()
 var publishSubject = PublishSubject<String>()
 publishSubject.onNext("very first value")
 publishSubject.subscribe { (event) in
@@ -84,7 +81,6 @@ behaviorSubject.onNext("first value")
 ## ReplaySubject
 
 ~~~swift
-let bag = DisposeBag()
 var replaySubject = ReplaySubject<String>.create(bufferSize: 1)
 replaySubject.onNext("before subscribe first value")
 replaySubject.onNext("before subscribe second value")
